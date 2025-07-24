@@ -162,7 +162,7 @@ export default createRule<RuleOptions, MessageIds>({
      * @param items The child nodes.
      * @private
      */
-    function extractCommaTokens(node: NodeType, items: (ASTNode | null)[]): Token[] {
+    function extractCommaTokens(node: NodeType, items: (ASTNode | null)[] = []): Token[] {
       if (items.length === 0) {
         // If there are no items, return an empty array.
         return []
@@ -229,7 +229,7 @@ export default createRule<RuleOptions, MessageIds>({
      * @param items The child nodes.
      * @private
      */
-    function validateComma(node: NodeType, items: (ASTNode | null)[]): void {
+    function validateComma(node: NodeType, items: (ASTNode | null)[] = []): void {
       const commaTokens = extractCommaTokens(node, items)
       commaTokens.forEach((commaToken) => {
         const tokenBeforeComma = sourceCode.getTokenBefore(commaToken)!
