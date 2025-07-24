@@ -1,5 +1,5 @@
 {
-  "name": "@stylistic/eslint-plugin",
+  "name": "eslint-plugin-stylistic-compat",
   "type": "commonjs",
   "version": "3.1.0",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",

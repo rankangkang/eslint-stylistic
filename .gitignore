@@ -16,3 +16,5 @@ cache
 *.alias.md
 *._merged_.md
 CHANGELOG.md
+
+.temp
