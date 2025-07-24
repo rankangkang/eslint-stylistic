@@ -142,6 +142,7 @@
   },
   "dependencies": {
     "@typescript-eslint/utils": "catalog:",
+    "core-js": "catalog:",
     "eslint-visitor-keys": "catalog:",
     "espree": "catalog:",
     "estraverse": "catalog:",
