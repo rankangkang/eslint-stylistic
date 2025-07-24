@@ -138,7 +138,7 @@
   },
   "peerDependencies": {
     "core-js": ">=3",
-    "eslint": ">=8.40.0 < 9"
+    "eslint": ">=8.40.0 <9"
   },
   "dependencies": {
     "@typescript-eslint/utils": "catalog:",
@@ -148,6 +148,7 @@
     "picomatch": "catalog:"
   },
   "devDependencies": {
-    "babel-plugin-transform-object-hasown": "^1.1.0"
+    "babel-plugin-transform-object-hasown": "^1.1.0",
+    "eslint": "catalog:"
   }
 }
