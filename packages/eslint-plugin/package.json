@@ -128,15 +128,16 @@
     "dist"
   ],
   "engines": {
-    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+    "node": ">=14.0.0"
   },
   "scripts": {
     "build": "rimraf dist && rollup --config=rollup.config.mjs",
+    "build:node14": "rimraf dist && rollup --config=rollup.config.node14.mjs",
     "dev": "rollup --config=rollup.config.mjs --watch",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "eslint": ">=8.40.0"
+    "eslint": ">=8.40.0 < 9"
   },
   "dependencies": {
     "@typescript-eslint/utils": "catalog:",

@@ -6,14 +6,17 @@ catalog:
   '@antfu/eslint-define-config': 1.23.0-2
   '@antfu/ni': ^23.2.0
   '@antfu/utils': ^8.1.0
+  '@babel/core': ^7.26.5
   '@babel/eslint-parser': ^7.26.5
   '@babel/plugin-syntax-decorators': ^7.25.9
   '@babel/plugin-syntax-do-expressions': ^7.25.9
   '@babel/plugin-syntax-function-bind': ^7.25.9
+  '@babel/preset-env': ^7.4.0
   '@babel/preset-react': ^7.26.3
   '@iconify-json/carbon': ^1.2.5
   '@iconify-json/ri': ^1.2.5
   '@rollup/plugin-alias': ^5.1.1
+  '@rollup/plugin-babel': ^6.0.4
   '@rollup/plugin-commonjs': ^28.0.2
   '@rollup/plugin-node-resolve': ^16.0.0
   '@shikijs/transformers': ^2.1.0
