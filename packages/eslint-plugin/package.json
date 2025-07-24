@@ -137,6 +137,7 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
+    "core-js": ">=3",
     "eslint": ">=8.40.0 < 9"
   },
   "dependencies": {
@@ -145,5 +146,8 @@
     "espree": "catalog:",
     "estraverse": "catalog:",
     "picomatch": "catalog:"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-hasown": "^1.1.0"
   }
 }

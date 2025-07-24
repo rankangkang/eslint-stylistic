@@ -88,6 +88,7 @@ export function createConfig(cwd) {
               },
             }],
           ],
+          plugins: ["babel-plugin-transform-object-hasown"]
         }),
       ],
       external: [
