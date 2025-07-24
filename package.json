@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "pnpm -r run build",
+    "build:compat": "pnpm -r run build:compat",
     "dev": "pnpm -r --parallel run dev",
     "stub": "pnpm -r --parallel run stub",
     "lint": "eslint . --cache",
