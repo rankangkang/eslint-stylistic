@@ -1,7 +1,11 @@
-# @stylistic/eslint-plugin
+# eslint-plugin-stylistic-compat
 
-Stylistic rules for ESLint, works for both JavaScript and TypeScript.
+this is a fork of `@stylistic/eslint-plugin`, with >=node12 support
 
-This plugin is a merge of `@stylistic/eslint-plugin-js` and `@stylistic/eslint-plugin-ts`.
+> # @stylistic/eslint-plugin
 
-Check the [documentation](https://eslint.style/packages/default) for more details.
+> Stylistic rules for ESLint, works for both JavaScript and TypeScript.
+
+> This plugin is a merge of `@stylistic/eslint-plugin-js` and `@stylistic/eslint-plugin-ts`.
+
+> Check the [documentation](https://eslint.style/packages/default) for more details.
