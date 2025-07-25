@@ -39,12 +39,12 @@ export const configs: Configs = {
   /**
    * Enable all rules, in Flat Config Format
    */
-  'all-flat': createAllConfigs(plugin, '@stylistic', true, name => !allConfigsIgnore.some(re => re.test(name))) as Linter.Config,
+  'all-flat': createAllConfigs(plugin, 'stylistic-compat', true, name => !allConfigsIgnore.some(re => re.test(name))) as Linter.Config,
 
   /**
    * Enable all rules, in Legacy Config Format
    */
-  'all-extends': createAllConfigs(plugin, '@stylistic', false, name => !allConfigsIgnore.some(re => re.test(name))) as Linter.BaseConfig,
+  'all-extends': createAllConfigs(plugin, 'stylistic-compat', false, name => !allConfigsIgnore.some(re => re.test(name))) as Linter.BaseConfig,
 
   /**
    * @deprecated Use `recommended-extends` instead

@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-stylistic-compat",
   "type": "commonjs",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/eslint-stylistic/eslint-stylistic#readme",
@@ -143,7 +143,7 @@
     "build:node14": "rimraf dist && rollup --config=rollup.config.node14.mjs",
     "build:compat": "rimraf dist && rollup --config=rollup.config.compat.mjs",
     "dev": "rollup --config=rollup.config.mjs --watch",
-    "publish:compat": "pnpm publish",
+    "publish:compat": "pnpm publish --registry=https://registry.npmjs.org/ --no-git-checks",
     "prepublishOnly": "pnpm build:compat"
   },
   "peerDependencies": {
