@@ -1,7 +1,8 @@
 {
   "name": "eslint-plugin-stylistic-compat",
   "type": "commonjs",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1",
+  "description": "Compatibility version of @stylistic/eslint-plugin for Node.js >= 12 and ESLint v8",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/eslint-stylistic/eslint-stylistic#readme",
@@ -19,7 +20,10 @@
     "eslint-stylistic",
     "eslint-stylistic-compat",
     "node12",
-    "node14"
+    "node14",
+    "node16",
+    "legacy",
+    "compatibility"
   ],
   "exports": {
     ".": {
@@ -140,7 +144,6 @@
   },
   "scripts": {
     "build": "rimraf dist && rollup --config=rollup.config.mjs",
-    "build:node14": "rimraf dist && rollup --config=rollup.config.node14.mjs",
     "build:compat": "rimraf dist && rollup --config=rollup.config.compat.mjs",
     "dev": "rollup --config=rollup.config.mjs --watch",
     "publish:compat": "pnpm publish --registry=https://registry.npmjs.org/ --no-git-checks",
@@ -148,18 +151,15 @@
   },
   "peerDependencies": {
     "core-js": ">=3",
-    "eslint": ">=8.40.0 <9"
+    "eslint": ">=8 <9"
   },
-  "dependencies": {
+  "devDependencies": {
     "@typescript-eslint/utils": "catalog:",
+    "babel-plugin-transform-object-hasown": "^1.1.0",
     "core-js": "catalog:",
     "eslint-visitor-keys": "catalog:",
     "espree": "catalog:",
     "estraverse": "catalog:",
     "picomatch": "catalog:"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-object-hasown": "^1.1.0",
-    "eslint": "catalog:"
   }
 }

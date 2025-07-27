@@ -295,9 +295,6 @@ importers:
       '@shikijs/vitepress-twoslash':
         specifier: 'catalog:'
         version: 2.1.0(typescript@5.7.3)
-      '@stylistic/eslint-plugin':
-        specifier: workspace:*
-        version: link:packages/eslint-plugin
       '@stylistic/eslint-plugin-js':
         specifier: workspace:*
         version: link:packages/eslint-plugin-js
@@ -358,6 +355,9 @@ importers:
       eslint-plugin-format:
         specifier: 'catalog:'
         version: 1.0.1(eslint@8.57.1)
+      eslint-plugin-stylistic-compat:
+        specifier: workspace:*
+        version: link:packages/eslint-plugin
       eslint-visitor-keys:
         specifier: 'catalog:'
         version: 4.2.0
@@ -506,9 +506,16 @@ importers:
 
   packages/eslint-plugin:
     dependencies:
+      eslint:
+        specifier: '>=8.40.0 <9'
+        version: 8.57.1
+    devDependencies:
       '@typescript-eslint/utils':
         specifier: 8.13.0
         version: 8.13.0(eslint@8.57.1)(typescript@5.7.3)
+      babel-plugin-transform-object-hasown:
+        specifier: ^1.1.0
+        version: 1.1.0
       core-js:
         specifier: 'catalog:'
         version: 3.44.0
@@ -524,13 +531,6 @@ importers:
       picomatch:
         specifier: 'catalog:'
         version: 4.0.2
-    devDependencies:
-      babel-plugin-transform-object-hasown:
-        specifier: ^1.1.0
-        version: 1.1.0
-      eslint:
-        specifier: 'catalog:'
-        version: 8.57.1
 
   packages/eslint-plugin-js:
     dependencies:
