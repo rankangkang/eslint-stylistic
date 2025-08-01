@@ -150,16 +150,10 @@
     "prepublishOnly": "pnpm build:compat"
   },
   "peerDependencies": {
-    "core-js": ">=3",
     "eslint": ">=8 <9"
   },
-  "devDependencies": {
-    "@typescript-eslint/utils": "catalog:",
-    "babel-plugin-transform-object-hasown": "^1.1.0",
-    "core-js": "catalog:",
-    "eslint-visitor-keys": "catalog:",
-    "espree": "catalog:",
-    "estraverse": "catalog:",
-    "picomatch": "catalog:"
+  "dependencies": {
+    "@babel/runtime": "catalog:",
+    "@babel/runtime-corejs3": "catalog:"
   }
 }

@@ -75,24 +75,27 @@ export function createConfig(cwd) {
         resolve({ preferBuiltins: true }),
         aliasPlugin(),
         babel({
-          babelHelpers: 'bundled',
+          babelHelpers: 'runtime',
           extensions: ['.ts', '.js', '.jsx', '.es6', '.es', '.mjs'],
           presets: [
             ['@babel/preset-env', {
               targets: {
                 node: '12',
               },
-              useBuiltIns: 'usage',
-              shippedProposals: true,
-              corejs: {
-                version: '3.8',
-                proposals: true,
-              },
-              modules: false,
               loose: true,
+              modules: false,
             }],
           ],
           plugins: [
+            ['@babel/plugin-transform-runtime', {
+              corejs: {
+                version: 3,
+                proposals: true,
+              },
+              helpers: true,
+              regenerator: true,
+              useESModules: false,
+            }],
             'babel-plugin-transform-object-hasown',
           ],
         }),
@@ -100,6 +103,8 @@ export function createConfig(cwd) {
       external: [
         ...[
           'eslint',
+          '@babel/runtime',
+          '@babel/runtime-corejs3',
           // ...Object.keys(pkg.dependencies || []),
           // ...Object.keys(pkg.peerDependencies || []),
         ].flatMap(dep => [
